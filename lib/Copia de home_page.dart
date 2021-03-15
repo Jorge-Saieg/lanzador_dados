@@ -28,7 +28,7 @@ class Dados extends StatefulWidget {
 class _DadosState extends State<Dados> {
   int numero = 3;
   int numero2 = 1;
-  bool dosDados = true;
+  bool dosDados = false;
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +48,7 @@ class _DadosState extends State<Dados> {
                   'assets/images/dado$numero.png',
                   width: 150,
                 ),
-                if (dosDados == true)
+                if (dosDados = true)
                   Image.asset(
                     'assets/images/dado$numero2.png',
                     height: 150,
@@ -70,23 +70,6 @@ class _DadosState extends State<Dados> {
                     padding: EdgeInsets.all(10),
                     margin: EdgeInsets.all(10),
                     decoration: BoxDecoration(
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey[400],
-                          offset: const Offset(
-                            2.0,
-                            4.0,
-                          ),
-                          blurRadius: 7,
-                          spreadRadius: 0.5,
-                        ),
-                        BoxShadow(
-                          color: Colors.white,
-                          offset: const Offset(0.0, 0.0),
-                          blurRadius: 0.0,
-                          spreadRadius: 0.0,
-                        ),
-                      ],
                       borderRadius: BorderRadius.circular(30),
                       border: Border.all(
                         color: bordeUnDado(),
@@ -105,23 +88,6 @@ class _DadosState extends State<Dados> {
                     padding: EdgeInsets.all(10),
                     margin: EdgeInsets.all(10),
                     decoration: BoxDecoration(
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey[400],
-                          offset: const Offset(
-                            2.0,
-                            4.0,
-                          ),
-                          blurRadius: 7,
-                          spreadRadius: 0.5,
-                        ),
-                        BoxShadow(
-                          color: Colors.white,
-                          offset: const Offset(0.0, 0.0),
-                          blurRadius: 0.0,
-                          spreadRadius: 0.0,
-                        ),
-                      ],
                       borderRadius: BorderRadius.circular(30),
                       border: Border.all(
                         color: bordeDosDados(),
@@ -169,10 +135,8 @@ class _DadosState extends State<Dados> {
   cantidadDados() {
     if (dosDados == true) {
       dosDados = false;
-      setState(() {});
     } else {
       dosDados = true;
-      setState(() {});
     }
   }
 
